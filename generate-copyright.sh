@@ -1,5 +1,6 @@
 #!/bin/bash
 
+COPYRIGHT_PREFIX=" * Copyright (C)"
 f=$1
 
 last_user="X"
@@ -12,9 +13,9 @@ while read -r line; do
 	if [ "$last_user" != "$auth_user" ]; then
 		if [ "$last_user" != "X" ]; then
 			if [ "$last_edate" == $last_sdate ]; then
-				echo " * Copyright (C) $last_sdate $last_user"
+				echo "$COPYRIGHT_PREFIX $last_sdate $last_user"
 			else
-				echo " * Copyright (C) $last_sdate-$last_edate $last_user"
+				echo "$COPYRIGHT_PREFIX $last_sdate-$last_edate $last_user"
 			fi
 		fi
 		last_sdate=$auth_date
