@@ -8,7 +8,7 @@ Uses git history to generate fancy copyright headers for files.
 Another, more complex example:
 
     $ cd ~/Projects/toaruos
-    $ generate-copyright.sh .
+    $ generate-copyright.sh . | sort
      * Copyright (C) 2011-2014 Kevin Lange
      * Copyright (C) 2012 Markus Schober
      * Copyright (C) 2012 Tianyi Wang
